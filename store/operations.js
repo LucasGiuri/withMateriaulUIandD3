@@ -1,1 +1,1 @@
-export * from './characters/operations';
+export * from './products/operations';

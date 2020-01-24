@@ -7,22 +7,12 @@ const MenuContainer = ({router}) => {
   const urls = [{
     url: "/",
     href: "/",
-    text: "People"
+    text: "List"
   },
   {
-    url: "/films",
-    href: "/films",
-    text: "Films"
-  },
-  {
-    url: "/vehicles",
-    href: "/vehicles",
-    text: 'Vehicles'
-  },
-  {
-    url: '/planets',
-    href: '/planets',
-    text: 'Planets'
+    url: '/charts',
+    href: '/charts',
+    text: 'Charts'
   }];
 
   return <Menu urls={urls} currentPath={pathname} />

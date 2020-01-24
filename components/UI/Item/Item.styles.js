@@ -4,7 +4,8 @@ import { WHITE, OLD_GREY } from '../../../public/styles/colors';
 export const ItemContainer = styled.div`
   padding: 14px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: space-between;
   cursor: pointer;
   border-bottom: 1px solid ${OLD_GREY};
   font-family: 'Roboto', sans-serif;
@@ -14,4 +15,15 @@ export const ItemContainer = styled.div`
   &:hover {
     color: ${WHITE};
   }
+`;
+
+export const IteamHeader = styled.div`
+  display: flex;
+  padding-bottom: 34px;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+export const Date = styled.div`
+  font-size: 14px;
 `;

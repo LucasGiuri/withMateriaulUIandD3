@@ -1,9 +1,19 @@
 import styled from 'styled-components';
-import { BLACK } from '../../../public/styles/colors';
+import { SECONDARY } from '../../../public/styles/colors';
 
 export const Grid = styled.div`
-  background-color: ${BLACK};
   div {
     border-top: none;
   }
+`;
+
+export const FiltersContainer = styled.div`
+  padding: 14px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  border-bottom: 1px solid ${SECONDARY};
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  color: ${SECONDARY};
 `;

@@ -1,24 +1,27 @@
 import PropTypes from 'prop-types';
-import NavLink from '../NavLink/NavLink';
-import { Grid } from './List.styles';
+import { Grid, FiltersContainer } from './List.styles';
 import Title from '../Title/Title';
 import Item from '../Item/Item';
 
-const List = ({list, filterBy, section}) => {
-  const sectionName = section.toLowerCase();
-  const filterName = filterBy.toLowerCase();
+const List = ({list, sortByName, sortByPriceAvgAmazon}) => {
+  const productName = "Product Name";
+  const priceAVG = "Price AVG";
 
   return (
     <Grid>
+      <FiltersContainer>
+        <span onClick={sortByName}>{productName}</span>
+        <span onClick={sortByPriceAvgAmazon}>{priceAVG}</span>
+      </FiltersContainer>
       {list ? 
-        list.map(item => {
-          const index = item.url.indexOf(filterName) + filterName.length;
-          const id = item.url.substring(index, item.url.length);
-
+        list.map((item, index) => {
+          const { name, fetch_date, avg_price_amazon } = item;
           return (
-            <NavLink key={item.url} href={sectionName} as={`${sectionName}${id}`}>
-              <Item>{item.name ? item.name : item.title}</Item>
-            </NavLink>
+            <Item key={index} 
+              name={name} 
+              date={fetch_date} 
+              avgPriceAmazon={avg_price_amazon} 
+            />
           )
         }) : 
         <Title text={"No results Found :("} />

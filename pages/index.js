@@ -1,23 +1,21 @@
 import { connect } from 'react-redux';
 import * as operations from '../store/operations';
 import * as selectors from '../store/selectors';
-import People from '../components/containers/Characters';
+import Home from '../components/containers/Home';
 
 const mapStateToProps = (state) => {
   return {
-    characters: selectors.getAllCharacters(state),
-    isLoading: selectors.isLoadingCharacters(state),
-    total: selectors.getTotalCharacters(state),
-    nextPage: selectors.getCharactersNextPage(state),
-    prevPage: selectors.getCharactersPreviousPage(state),
+    products: selectors.getAllProducts(state),
+    isLoading: selectors.isLoadingProducts(state)
   }
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    searchByName: (name) => dispatch(operations.searchCharacters(name)),
-    loadMore: (url) => dispatch(operations.fetchCharacters(url)),
+    loadData: () => dispatch(operations.getData()),
+    searchByName: (name) => dispatch(operations.searchByName(name)),
+    sortBySomething: (key) => dispatch(operations.sortBySomething(key)),
   }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(People);
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
