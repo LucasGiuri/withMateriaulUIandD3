@@ -2,10 +2,18 @@
 
 exports[`Item Item basic render snapshoot 1`] = `
 <div
-  className="Itemstyles__ItemContainer-sc-18euzxw-0 iNynqh"
+  className="Itemstyles__ItemContainer-sc-18euzxw-0 joFNen"
 >
-  <p>
-    Link to google
-  </p>
+  <div
+    className="Itemstyles__IteamHeader-sc-18euzxw-1 higtFY"
+  >
+    <span />
+    <span>
+      
+    </span>
+  </div>
+  <div
+    className="Itemstyles__Date-sc-18euzxw-2 dfgxTV"
+  />
 </div>
 `;

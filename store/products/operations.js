@@ -1,4 +1,4 @@
-import { GET_DATA, SORT_BY, SEARCH_BY_NAME } from './types';
+import { GET_DATA, SORT_BY_NAME, SORT_BY_NUMBER, SEARCH_BY_NAME } from './types';
 import { getProducts } from '../../apis/services';
 import apiCall from '../apiCall';
 
@@ -7,6 +7,9 @@ const formatData = (data) => {
     item.fetch_date = dateFormat(item.fetch_date)
     if (!item.avg_price_amazon) {
       item.avg_price_amazon = 0;
+    }
+    if (!item.sortByPriceCarethy) {
+      item.sortByPriceCarethy = 0;
     }
   })
   return data;
@@ -44,9 +47,16 @@ export const searchByName = (name) => {
   }
 }
 
-export const sortBySomething = (key) => {
+export const sortByNumber = (key) => {
   return {
-    type: SORT_BY,
+    type: SORT_BY_NUMBER,
+    key: key
+  }
+};
+
+export const sortByName = (key) => {
+  return {
+    type: SORT_BY_NAME,
     key: key
   }
 };

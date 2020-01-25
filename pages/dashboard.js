@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import * as operations from '../store/operations';
 import * as selectors from '../store/selectors';
-import Home from '../components/containers/Home';
+import Dashboard from '../components/containers/Dashboard';
 
 const mapStateToProps = (state) => {
   return {
@@ -15,8 +15,7 @@ const mapDispatchToProps = (dispatch) => {
     loadData: () => dispatch(operations.getData()),
     searchByName: (name) => dispatch(operations.searchByName(name)),
     sortByName: (key) => dispatch(operations.sortByName(key)),
-    sortByNumber: (key) => dispatch(operations.sortByNumber(key))
   }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);

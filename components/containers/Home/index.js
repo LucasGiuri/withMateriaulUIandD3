@@ -6,37 +6,47 @@ import List from '../../UI/List/List';
 import Title from '../../UI/Title/Title';
 import InputSearch from '../../UI/InputSearch/InputSearch';
 
-const Home = ({products, isLoading, sortBySomething, searchByName, loadData}) => {
+const Home = ({products, isLoading, sortByName, sortByNumber, searchByName, loadData}) => {
   const loading = "Loading...";
   const section = "Products";
   const nameKey = "name";
   const priceAvgAmazonKey = "avg_price_amazon";
+  const priceAvgCarethyKey = "avg_price_carethy";
 
   const [name, setName] = useState(`-${nameKey}`);
+  const [priceAvgCarethy, setPriceAvgCarethy] = useState(`-${priceAvgCarethyKey}`);
   const [priceAvgAmazon, setPriceAvgAmazon] = useState(`-${priceAvgAmazonKey}`);
+
+  const sort = (key) => {
+    const isReverted = key[0] !== '-';
+    if (key.includes(nameKey)) {
+      setName((isReverted ? '-':'') + nameKey);
+      sortByName(name);
+    }
+    if (key.includes(priceAvgAmazonKey))  {
+      setPriceAvgAmazon((isReverted ? '-': '') + priceAvgAmazonKey);
+      sortByNumber(priceAvgAmazon);
+    }
+    if (key.includes(priceAvgCarethyKey))  {
+      setPriceAvgCarethy((isReverted ? '-': '') + priceAvgCarethyKey);
+      sortByNumber(priceAvgCarethy);
+    }
+  };
 
   const onSearch = (name) => {
     searchByName(name);
   };
 
-  const sortByPriceAvgAmazon = () => {
-    if (priceAvgAmazon[0] !== "-") {
-      setPriceAvgAmazon(`-${priceAvgAmazonKey}`);
-    }
-    else {
-      setPriceAvgAmazon(priceAvgAmazonKey)
-    }
-    sortBySomething(priceAvgAmazon);
+  const sortByTitle = () => {
+    sort(name);
   };
 
-  const sortByName = () => {
-    if (name[0] !== "-") {
-      setName(`-${nameKey}`);
-    }
-    else {
-      setName(nameKey)
-    }
-    sortBySomething(name);
+  const sortByPriceAvgCarethy = () => {
+    sort(priceAvgCarethy);
+  };
+  
+  const sortByPriceAvgAmazon = () => {
+    sort(priceAvgAmazon);
   };
 
   const onReset = () => {
@@ -50,28 +60,28 @@ const Home = ({products, isLoading, sortBySomething, searchByName, loadData}) =>
       {isLoading ? 
         <Title text={loading} isBold={true} centered={true} /> : 
         <Fragment>
-          <List list={products} sortByName={sortByName}  sortByPriceAvgAmazon={sortByPriceAvgAmazon} />
+          <List 
+            list={products} 
+            sortByName={sortByTitle} 
+            sortByPriceCarethy={sortByPriceAvgCarethy} 
+            sortByPriceAvgAmazon={sortByPriceAvgAmazon} />
         </Fragment>
       }
     </Fragment>
   )
 };
 
-// Home.propTypes = {
-//   characters: PropTypes.array.isRequired,
-//   isLoading: PropTypes.bool.isRequired,
-//   total: PropTypes.number,
-//   nextPage: PropTypes.string,
-//   prevPage: PropTypes.string,
-//   loadMore: PropTypes.func.isRequired,
-//   searchByName: PropTypes.func.isRequired,
-// };
+Home.propTypes = {
+  products: PropTypes.array.isRequired,
+  isLoading: PropTypes.bool,
+  sortByNumber: PropTypes.func.isRequired,
+  sortByName: PropTypes.func.isRequired,
+  searchByName: PropTypes.func.isRequired,
+};
 
-// Home.defaultProps = {
-//   total: 1,
-//   nextPage: '',
-//   prevPage: ''
-// };
+Home.defaultProps = {
+  isLoading: false
+};
 
 Home.getInitialProps = async ({store}) => {
   await store.dispatch(operations.getData());

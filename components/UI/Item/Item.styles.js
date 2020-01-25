@@ -24,6 +24,12 @@ export const IteamHeader = styled.div`
   justify-content: space-between;
 `;
 
+export const AvgColumn = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 30%;
+`;
+
 export const Date = styled.div`
   font-size: 14px;
 `;

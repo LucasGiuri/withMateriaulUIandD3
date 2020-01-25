@@ -1,33 +1,63 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`List List basic render snapshoot with empty list 1`] = `
-.c0 {
-  background-color: #000000;
-}
-
 .c0 div {
   border-top: none;
+}
+
+.c1 {
+  padding: 14px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  cursor: pointer;
+  border-bottom: 1px solid rgb(1,108,249);
+  font-family: 'Roboto',sans-serif;
+  font-size: 22px;
+  color: rgb(1,108,249);
 }
 
 <div
   className="c0"
-/>
+>
+  <div
+    className="c1"
+  >
+    <span>
+      Product Name
+    </span>
+    <span>
+      Price AVG
+    </span>
+  </div>
+</div>
 `;
 
 exports[`List List complete with obj.name render snapshoot with empty list 1`] = `
-.c1 {
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-family: 'Roboto',sans-serif;
-}
-
-.c0 {
-  background-color: #000000;
-}
-
 .c0 div {
   border-top: none;
+}
+
+.c1 {
+  padding: 14px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  cursor: pointer;
+  border-bottom: 1px solid rgb(1,108,249);
+  font-family: 'Roboto',sans-serif;
+  font-size: 22px;
+  color: rgb(1,108,249);
 }
 
 .c2 {
@@ -36,9 +66,13 @@ exports[`List List complete with obj.name render snapshoot with empty list 1`] =
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   cursor: pointer;
   border-bottom: 1px solid #999999;
   font-family: 'Roboto',sans-serif;
@@ -52,59 +86,112 @@ exports[`List List complete with obj.name render snapshoot with empty list 1`] =
   color: #FFFFFF;
 }
 
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 34px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c4 {
+  font-size: 14px;
+}
+
 <div
   className="c0"
 >
-  <a
+  <div
     className="c1"
-    onClick={[Function]}
-    onMouseEnter={[Function]}
+  >
+    <span>
+      Product Name
+    </span>
+    <span>
+      Price AVG
+    </span>
+  </div>
+  <div
+    className="c2"
   >
     <div
-      className="c2"
+      className="c3"
     >
-      item 1
+      <span>
+        item 1
+      </span>
+      <span>
+        
+      </span>
     </div>
-  </a>
-  <a
-    className="c1"
-    onClick={[Function]}
-    onMouseEnter={[Function]}
+    <div
+      className="c4"
+    />
+  </div>
+  <div
+    className="c2"
   >
     <div
-      className="c2"
+      className="c3"
     >
-      item 2
+      <span>
+        item 2
+      </span>
+      <span>
+        
+      </span>
     </div>
-  </a>
-  <a
-    className="c1"
-    onClick={[Function]}
-    onMouseEnter={[Function]}
+    <div
+      className="c4"
+    />
+  </div>
+  <div
+    className="c2"
   >
     <div
-      className="c2"
+      className="c3"
     >
-      item 3
+      <span>
+        item 3
+      </span>
+      <span>
+        
+      </span>
     </div>
-  </a>
+    <div
+      className="c4"
+    />
+  </div>
 </div>
 `;
 
 exports[`List List complete with obj.title render snapshoot with empty list 1`] = `
-.c1 {
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-family: 'Roboto',sans-serif;
-}
-
-.c0 {
-  background-color: #000000;
-}
-
 .c0 div {
   border-top: none;
+}
+
+.c1 {
+  padding: 14px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  cursor: pointer;
+  border-bottom: 1px solid rgb(1,108,249);
+  font-family: 'Roboto',sans-serif;
+  font-size: 22px;
+  color: rgb(1,108,249);
 }
 
 .c2 {
@@ -113,9 +200,13 @@ exports[`List List complete with obj.title render snapshoot with empty list 1`] 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   cursor: pointer;
   border-bottom: 1px solid #999999;
   font-family: 'Roboto',sans-serif;
@@ -129,41 +220,82 @@ exports[`List List complete with obj.title render snapshoot with empty list 1`] 
   color: #FFFFFF;
 }
 
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 34px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c4 {
+  font-size: 14px;
+}
+
 <div
   className="c0"
 >
-  <a
+  <div
     className="c1"
-    onClick={[Function]}
-    onMouseEnter={[Function]}
+  >
+    <span>
+      Product Name
+    </span>
+    <span>
+      Price AVG
+    </span>
+  </div>
+  <div
+    className="c2"
   >
     <div
-      className="c2"
+      className="c3"
     >
-      item 1
+      <span />
+      <span>
+        
+      </span>
     </div>
-  </a>
-  <a
-    className="c1"
-    onClick={[Function]}
-    onMouseEnter={[Function]}
+    <div
+      className="c4"
+    />
+  </div>
+  <div
+    className="c2"
   >
     <div
-      className="c2"
+      className="c3"
     >
-      item 2
+      <span />
+      <span>
+        
+      </span>
     </div>
-  </a>
-  <a
-    className="c1"
-    onClick={[Function]}
-    onMouseEnter={[Function]}
+    <div
+      className="c4"
+    />
+  </div>
+  <div
+    className="c2"
   >
     <div
-      className="c2"
+      className="c3"
     >
-      item 3
+      <span />
+      <span>
+        
+      </span>
     </div>
-  </a>
+    <div
+      className="c4"
+    />
+  </div>
 </div>
 `;

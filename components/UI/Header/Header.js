@@ -1,11 +1,10 @@
 import { useState } from 'react';
+import NavLink from '../NavLink/NavLink';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -15,14 +14,12 @@ import HomeIcon from '@material-ui/icons/Home';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 
 const ButtonAppBar = () => {
-  const useStyles = makeStyles({
-    list: {
-      width: 250,
-    },
-  });
-
-  const classes = useStyles();
   const [menu, setMenuStatus] = useState(false);
+
+  const links = [
+    {id: 1, page: "/", text: "Home"},
+    {id: 2, page: "/dashboard", text: "Dashboard"},
+  ];
 
   const toggleDrawer = () => {
     setMenuStatus(!menu);
@@ -30,17 +27,18 @@ const ButtonAppBar = () => {
 
   const sideList = () => (
     <div
-      className={classes.list}
       role="presentation"
       onClick={toggleDrawer}
       onKeyDown={toggleDrawer}
     >
       <List>
-        {['Home', 'Dashboard'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <HomeIcon /> : <DashboardIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
+        {links.map((link, index) => (
+          <NavLink href={link.page} as={link.page}>
+            <ListItem button key={link.id}>
+              <ListItemIcon>{index % 2 === 0 ? <HomeIcon /> : <DashboardIcon />}</ListItemIcon>
+              <ListItemText primary={link.text} />
+            </ListItem>
+          </NavLink>
         ))}
       </List>
     </div>
@@ -48,7 +46,7 @@ const ButtonAppBar = () => {
 
   return (
     <AppBar position="static">
-      <Toolbar>
+      {/* <Toolbar>
         <Drawer open={menu} onClose={toggleDrawer}>
           {sideList('left')}
         </Drawer>
@@ -58,7 +56,7 @@ const ButtonAppBar = () => {
         <Typography variant="h6">
           Shalion !
         </Typography>
-      </Toolbar>
+      </Toolbar> */}
     </AppBar>
   );
 };

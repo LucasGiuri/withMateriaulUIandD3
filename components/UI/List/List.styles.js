@@ -17,3 +17,9 @@ export const FiltersContainer = styled.div`
   font-size: 22px;
   color: ${SECONDARY};
 `;
+
+export const AvgFilter = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 30%;
+`;

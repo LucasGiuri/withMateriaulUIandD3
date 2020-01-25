@@ -6,7 +6,7 @@ exports[`Title Title basic render snapshoot 1`] = `
   padding-left: 14px;
   padding-right: 14px;
   font-family: 'Roboto',sans-serif;
-  color: #DC3545;
+  color: rgb(1,108,249);
   font-size: 22px;
   text-align: left;
   font-weight: normal;
@@ -25,7 +25,7 @@ exports[`Title Title centered render snapshoot 1`] = `
   padding-left: 14px;
   padding-right: 14px;
   font-family: 'Roboto',sans-serif;
-  color: #DC3545;
+  color: rgb(1,108,249);
   font-size: 22px;
   text-align: center;
   font-weight: normal;
@@ -44,7 +44,7 @@ exports[`Title Title isBold and centered render snapshoot 1`] = `
   padding-left: 14px;
   padding-right: 14px;
   font-family: 'Roboto',sans-serif;
-  color: #DC3545;
+  color: rgb(1,108,249);
   font-size: 22px;
   text-align: center;
   font-weight: bold;
@@ -63,7 +63,7 @@ exports[`Title Title isBold render snapshoot 1`] = `
   padding-left: 14px;
   padding-right: 14px;
   font-family: 'Roboto',sans-serif;
-  color: #DC3545;
+  color: rgb(1,108,249);
   font-size: 22px;
   text-align: left;
   font-weight: bold;
@@ -82,7 +82,7 @@ exports[`Title Title isBold, isSmall and centered render snapshoot 1`] = `
   padding-left: 14px;
   padding-right: 14px;
   font-family: 'Roboto',sans-serif;
-  color: #DC3545;
+  color: rgb(1,108,249);
   font-size: 16px;
   text-align: center;
   font-weight: bold;
@@ -101,7 +101,7 @@ exports[`Title Title isSmall and centered render snapshoot 1`] = `
   padding-left: 14px;
   padding-right: 14px;
   font-family: 'Roboto',sans-serif;
-  color: #DC3545;
+  color: rgb(1,108,249);
   font-size: 16px;
   text-align: center;
   font-weight: normal;
@@ -120,7 +120,7 @@ exports[`Title Title isSmall and isBold render snapshoot 1`] = `
   padding-left: 14px;
   padding-right: 14px;
   font-family: 'Roboto',sans-serif;
-  color: #DC3545;
+  color: rgb(1,108,249);
   font-size: 16px;
   text-align: left;
   font-weight: bold;
@@ -139,7 +139,7 @@ exports[`Title Title isSmall render snapshoot 1`] = `
   padding-left: 14px;
   padding-right: 14px;
   font-family: 'Roboto',sans-serif;
-  color: #DC3545;
+  color: rgb(1,108,249);
   font-size: 16px;
   text-align: left;
   font-weight: normal;
