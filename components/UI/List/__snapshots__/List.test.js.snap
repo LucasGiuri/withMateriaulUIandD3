@@ -22,18 +22,45 @@ exports[`List List basic render snapshoot with empty list 1`] = `
   color: rgb(1,108,249);
 }
 
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-basis: 30%;
+  -ms-flex-preferred-size: 30%;
+  flex-basis: 30%;
+}
+
 <div
   className="c0"
 >
   <div
     className="c1"
   >
-    <span>
+    <span
+      onClick={[Function]}
+    >
       Product Name
     </span>
-    <span>
-      Price AVG
-    </span>
+    <div
+      className="c2"
+    >
+      <span
+        onClick={[Function]}
+      >
+        Price CARETHY
+      </span>
+      <span
+        onClick={[Function]}
+      >
+        Price AVG
+      </span>
+    </div>
   </div>
 </div>
 `;
@@ -61,6 +88,20 @@ exports[`List List complete with obj.name render snapshoot with empty list 1`] =
 }
 
 .c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-basis: 30%;
+  -ms-flex-preferred-size: 30%;
+  flex-basis: 30%;
+}
+
+.c3 {
   padding: 14px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -82,11 +123,11 @@ exports[`List List complete with obj.name render snapshoot with empty list 1`] =
   color: #999999;
 }
 
-.c2:hover {
+.c3:hover {
   color: #FFFFFF;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -101,7 +142,21 @@ exports[`List List complete with obj.name render snapshoot with empty list 1`] =
   justify-content: space-between;
 }
 
-.c4 {
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-basis: 30%;
+  -ms-flex-preferred-size: 30%;
+  flex-basis: 30%;
+}
+
+.c6 {
   font-size: 14px;
 }
 
@@ -111,63 +166,103 @@ exports[`List List complete with obj.name render snapshoot with empty list 1`] =
   <div
     className="c1"
   >
-    <span>
+    <span
+      onClick={[Function]}
+    >
       Product Name
     </span>
-    <span>
-      Price AVG
-    </span>
+    <div
+      className="c2"
+    >
+      <span
+        onClick={[Function]}
+      >
+        Price CARETHY
+      </span>
+      <span
+        onClick={[Function]}
+      >
+        Price AVG
+      </span>
+    </div>
   </div>
   <div
-    className="c2"
+    className="c3"
   >
     <div
-      className="c3"
+      className="c4"
     >
       <span>
         item 1
       </span>
-      <span>
-        
-      </span>
+      <div
+        className="c5"
+      >
+        <span>
+          1 EUR
+        </span>
+        <span>
+          1 EUR
+        </span>
+      </div>
     </div>
     <div
-      className="c4"
-    />
+      className="c6"
+    >
+      
+    </div>
   </div>
   <div
-    className="c2"
+    className="c3"
   >
     <div
-      className="c3"
+      className="c4"
     >
       <span>
         item 2
       </span>
-      <span>
-        
-      </span>
+      <div
+        className="c5"
+      >
+        <span>
+          1 EUR
+        </span>
+        <span>
+          1 EUR
+        </span>
+      </div>
     </div>
     <div
-      className="c4"
-    />
+      className="c6"
+    >
+      
+    </div>
   </div>
   <div
-    className="c2"
+    className="c3"
   >
     <div
-      className="c3"
+      className="c4"
     >
       <span>
         item 3
       </span>
-      <span>
-        
-      </span>
+      <div
+        className="c5"
+      >
+        <span>
+          1 EUR
+        </span>
+        <span>
+          1 EUR
+        </span>
+      </div>
     </div>
     <div
-      className="c4"
-    />
+      className="c6"
+    >
+      
+    </div>
   </div>
 </div>
 `;
@@ -195,6 +290,20 @@ exports[`List List complete with obj.title render snapshoot with empty list 1`] 
 }
 
 .c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-basis: 30%;
+  -ms-flex-preferred-size: 30%;
+  flex-basis: 30%;
+}
+
+.c3 {
   padding: 14px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -216,11 +325,11 @@ exports[`List List complete with obj.title render snapshoot with empty list 1`] 
   color: #999999;
 }
 
-.c2:hover {
+.c3:hover {
   color: #FFFFFF;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -235,7 +344,21 @@ exports[`List List complete with obj.title render snapshoot with empty list 1`] 
   justify-content: space-between;
 }
 
-.c4 {
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-basis: 30%;
+  -ms-flex-preferred-size: 30%;
+  flex-basis: 30%;
+}
+
+.c6 {
   font-size: 14px;
 }
 
@@ -245,57 +368,97 @@ exports[`List List complete with obj.title render snapshoot with empty list 1`] 
   <div
     className="c1"
   >
-    <span>
+    <span
+      onClick={[Function]}
+    >
       Product Name
     </span>
-    <span>
-      Price AVG
-    </span>
-  </div>
-  <div
-    className="c2"
-  >
     <div
-      className="c3"
+      className="c2"
     >
-      <span />
-      <span>
-        
+      <span
+        onClick={[Function]}
+      >
+        Price CARETHY
+      </span>
+      <span
+        onClick={[Function]}
+      >
+        Price AVG
       </span>
     </div>
-    <div
-      className="c4"
-    />
   </div>
   <div
-    className="c2"
+    className="c3"
   >
     <div
-      className="c3"
+      className="c4"
     >
       <span />
-      <span>
-        
-      </span>
+      <div
+        className="c5"
+      >
+        <span>
+          1 EUR
+        </span>
+        <span>
+          1 EUR
+        </span>
+      </div>
     </div>
     <div
-      className="c4"
-    />
+      className="c6"
+    >
+      
+    </div>
   </div>
   <div
-    className="c2"
+    className="c3"
   >
     <div
-      className="c3"
+      className="c4"
     >
       <span />
-      <span>
-        
-      </span>
+      <div
+        className="c5"
+      >
+        <span>
+          1 EUR
+        </span>
+        <span>
+          1 EUR
+        </span>
+      </div>
     </div>
     <div
+      className="c6"
+    >
+      
+    </div>
+  </div>
+  <div
+    className="c3"
+  >
+    <div
       className="c4"
-    />
+    >
+      <span />
+      <div
+        className="c5"
+      >
+        <span>
+          1 EUR
+        </span>
+        <span>
+          1 EUR
+        </span>
+      </div>
+    </div>
+    <div
+      className="c6"
+    >
+      
+    </div>
   </div>
 </div>
 `;

@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
 import { GET_DATA_START, GET_DATA_SUCCESS, GET_DATA_FAIL, 
+        GET_DASHBOARD_DATA_START, GET_DASHBOARD_DATA_SUCCESS, GET_DASHBOARD_DATA_FAIL,
         SORT_BY_NAME, SORT_BY_NUMBER, SEARCH_BY_NAME } from './types';
 
 const sortByname = (key) => {
@@ -56,12 +57,25 @@ const results = (state = [], action) => {
   }
 };
 
+const dashboardResults = (state = [], action) => {
+  switch (action.type) {
+    case GET_DASHBOARD_DATA_SUCCESS: {
+      return [...state, ...action.results];
+    }
+    default:
+      return state
+  }
+}
+
 const isLoading = (state = false, action) => {
   switch (action.type) {
     case GET_DATA_START:
     case GET_DATA_FAIL:
+    case GET_DASHBOARD_DATA_START:
+    case GET_DASHBOARD_DATA_FAIL:
       return true
     case GET_DATA_SUCCESS:
+    case GET_DASHBOARD_DATA_SUCCESS:
       return false
     default:
       return state
@@ -70,6 +84,7 @@ const isLoading = (state = false, action) => {
 
 const reducer = combineReducers({
   results,
+  dashboardResults,
   isLoading
 })
 

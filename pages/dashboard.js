@@ -5,16 +5,14 @@ import Dashboard from '../components/containers/Dashboard';
 
 const mapStateToProps = (state) => {
   return {
-    products: selectors.getAllProducts(state),
+    dashboardProducts: selectors.getDashboardProducts(state),
     isLoading: selectors.isLoadingProducts(state)
   }
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    loadData: () => dispatch(operations.getData()),
-    searchByName: (name) => dispatch(operations.searchByName(name)),
-    sortByName: (key) => dispatch(operations.sortByName(key)),
+    loadData: () => dispatch(operations.getDashboardData())
   }
 };
 

@@ -1,31 +1,28 @@
-import PropTypes from 'prop-types';
 import NavLink from '../NavLink/NavLink';
-import { Ul, Li, Nav } from './Menu.styles';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import HomeIcon from '@material-ui/icons/Home';
+import DashboardIcon from '@material-ui/icons/Dashboard';
 
-const Menu = ({urls, currentPath}) => (
-  <Nav>
-    <Ul>
-      {urls.map(link => {
-        const { url, href, text } = link;
-        return (
-          <Li key={url} isActive={url === currentPath}>
-            <NavLink href={href} as={url}>
-              {text}
-            </NavLink>
-          </Li>
-        )
-      })}
-    </Ul>
-  </Nav>
+const links = [
+  {id: 1, page: "/", text: "Home"},
+  {id: 2, page: "/dashboard", text: "Dashboard"},
+];
+
+
+const Menu = () => (
+  <List>
+    {links.map((link, index) => (
+      <NavLink key={link.id} href={link.page} as={link.page}>
+        <ListItem button key={link.id}>
+          <ListItemIcon>{index % 2 === 0 ? <HomeIcon /> : <DashboardIcon />}</ListItemIcon>
+          <ListItemText primary={link.text} />
+        </ListItem>
+      </NavLink>
+    ))}
+  </List>
 );
-
-Menu.propTypes = {
-  urls: PropTypes.arrayOf(PropTypes.object),
-  currentPath: PropTypes.string.isRequired,
-};
-
-Menu.defaultProps = {
-  urls: [{}],
-};
 
 export default Menu;

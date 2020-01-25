@@ -73,6 +73,7 @@ const Home = ({products, isLoading, sortByName, sortByNumber, searchByName, load
 
 Home.propTypes = {
   products: PropTypes.array.isRequired,
+  loadData: PropTypes.func,
   isLoading: PropTypes.bool,
   sortByNumber: PropTypes.func.isRequired,
   sortByName: PropTypes.func.isRequired,
@@ -80,7 +81,8 @@ Home.propTypes = {
 };
 
 Home.defaultProps = {
-  isLoading: false
+  isLoading: false,
+  loadData: () => {}
 };
 
 Home.getInitialProps = async ({store}) => {

@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import { BLACK } from './colors';
+import { WHITE } from './colors';
 
 export const Body = styled.body`
   width: 100%;
   margin: 0px;
-  background: ${BLACK};
+  background: ${WHITE};
 `;
 
 export const Section = styled.section`
