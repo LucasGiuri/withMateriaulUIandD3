@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PieChart PieChart basic render snapshoot 1`] = `
+<div
+  className="recharts-wrapper"
+  style={
+    Object {
+      "cursor": "default",
+      "height": 400,
+      "position": "relative",
+      "width": 400,
+    }
+  }
+>
+  <svg
+    className="recharts-surface"
+    cx="50%"
+    cy="50%"
+    height={400}
+    version="1.1"
+    viewBox="0 0 400 400"
+    width={400}
+  >
+    <defs>
+      <clipPath
+        id="recharts1-clip"
+      >
+        <rect
+          height={390}
+          width={390}
+          x={5}
+          y={5}
+        />
+      </clipPath>
+    </defs>
+    <g
+      className="recharts-layer recharts-pie"
+    >
+      <g
+        className="recharts-layer"
+      >
+        <g
+          className="recharts-layer recharts-pie-sector"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        />
+        <g
+          className="recharts-layer recharts-pie-sector"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        />
+        <g
+          className="recharts-layer recharts-pie-sector"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        />
+        <g
+          className="recharts-layer recharts-pie-sector"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        />
+        <g
+          className="recharts-layer recharts-pie-sector"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        />
+      </g>
+    </g>
+  </svg>
+</div>
+`;

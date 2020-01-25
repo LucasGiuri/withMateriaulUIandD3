@@ -49,8 +49,8 @@ export const formatData = (data) => {
     if (!item.avg_price_amazon) {
       item.avg_price_amazon = 0;
     }
-    if (!item.sortByPriceCarethy) {
-      item.sortByPriceCarethy = 0;
+    if (!item.avg_price_carethy) {
+      item.avg_price_carethy = 0;
     }
   })
   return data;
