@@ -1,8 +1,9 @@
+import { Fragment } from 'react';
 import Title from '../../UI/Title/Title';
 import * as operations from '../../../store/operations';
 import PieChart from '../Charts/PieChart';
 import BarChart from '../Charts/BarChart';
-import { Fragment } from 'react';
+import VerticalChart from '../Charts/VerticalChart';
 
 const Dashboard = ({isLoading, dashboardProducts}) => {
   const loading = "Loading...";
@@ -12,6 +13,7 @@ const Dashboard = ({isLoading, dashboardProducts}) => {
       {isLoading ?
         <Title text={loading} isBold={true} centered={true} /> : 
         <Fragment>
+          <VerticalChart data={dashboardProducts} />
           <PieChart data={dashboardProducts} />
           {dashboardProducts.map(product => {
             const { name, id } = product;
