@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import PieChartComponent from '../../UI/Charts/PieChart/PieChart';
 
 const PieChart = ({data}) => {
@@ -9,6 +10,14 @@ const PieChart = ({data}) => {
   return (
     <PieChartComponent data={newData} />
   )
-}
+};
+
+PieChart.propTypes = {
+  data: PropTypes.array
+};
+
+PieChart.defaultProps = {
+  data: []
+};
 
 export default PieChart;

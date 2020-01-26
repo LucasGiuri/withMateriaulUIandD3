@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabs Tabs basic render snapshoot 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background: #FFFFFF;
+  color: #3f51b5;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  tex-align: center;
+  border-bottom: 1px solid #3f51b5;
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+
+.c1 p {
+  color: #3f51b5;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  tex-align: center;
+  border-bottom: 1px solid #3f51b5;
+  background-color: #3f51b5;
+  cursor: pointer;
+}
+
+.c3 p {
+  color: #FFFFFF;
+}
+
+.c2 {
+  margin-bottom: 22px;
+  padding-left: 14px;
+  padding-right: 14px;
+  font-family: 'Roboto',sans-serif;
+  color: #3f51b5;
+  font-size: 22px;
+  text-align: center;
+  font-weight: normal;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+    id={1}
+    onClick={[Function]}
+  >
+    <p
+      className="c2"
+    >
+      Products
+    </p>
+  </div>
+  <div
+    className="c3"
+    id={2}
+    onClick={[Function]}
+  >
+    <p
+      className="c2"
+    >
+      Categories
+    </p>
+  </div>
+  ;
+</div>
+`;

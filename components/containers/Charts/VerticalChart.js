@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Fragment } from "react";
 import VerticalChartComponent from "../../UI/Charts/VerticalChart/VerticalChart";
 import Title from "../../UI/Title/Title";
@@ -36,18 +37,24 @@ const VerticalChart = ({data}) => {
     newData[4].data.push({name: name, value: avgPriceElcorteingles !== 0 ? avgPriceElcorteingles / count: 0})
   });
 
-  console.log(newData)
-
   return (
     <Fragment>
       {newData.map(data => (
         <div key={data.id}>
-          <Title text={data.id} /> 
+          <Title text={data.id}/>
           <VerticalChartComponent data={data.data} />
         </div>
       ))}
     </Fragment>
   )
-}
+};
+
+VerticalChart.propTypes = {
+  data: PropTypes.array
+};
+
+VerticalChart.defaultProps = {
+  data: []
+};
 
 export default VerticalChart;

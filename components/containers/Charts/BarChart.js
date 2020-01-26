@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import BarChartComponent from '../../UI/Charts/BarChart/BarChart';
 
 const BarChart = ({data}) => {
@@ -27,6 +28,42 @@ const BarChart = ({data}) => {
   return (
     <BarChartComponent data={newData} />
   );
-}
+};
+
+BarChart.propTypes = {
+  data: PropTypes.shape({
+    count: PropTypes.number,
+    avgPriceAmazon: PropTypes.number,
+    avgPriceNotino: PropTypes.number,
+    avgPriceCarethy: PropTypes.number,
+    avgPricePerfumesclub: PropTypes.number,
+    avgPriceNutritienda: PropTypes.number,
+    avgPriceSephora: PropTypes.number,
+    avgPriceElcorteingles: PropTypes.number,
+    avgPriceFundgruben: PropTypes.number,
+    avgPricePrimor: PropTypes.number,
+    avgPriceCarrefour: PropTypes.number,
+    avgPriceMaquillalia: PropTypes.number,
+    avgPriceUlabox: PropTypes.number,
+  })
+};
+
+BarChart.defaultProps = {
+  data: {
+    count: 0,
+    avgPriceAmazon: 0,
+    avgPriceNotino: 0,
+    avgPriceCarethy: 0,
+    avgPricePerfumesclub: 0,
+    avgPriceNutritienda: 0,
+    avgPriceSephora: 0,
+    avgPriceElcorteingles: 0,
+    avgPriceFundgruben: 0,
+    avgPricePrimor: 0,
+    avgPriceCarrefour: 0,
+    avgPriceMaquillalia: 0,
+    avgPriceUlabox: 0,
+  }
+};
 
 export default BarChart;

@@ -1,10 +1,11 @@
-import {ComposedChart, Bar, XAxis, YAxis, CartesianGrid, 
-  Tooltip, ResponsiveContainer, Legend } from 'recharts';
+import {BarChart, Bar, XAxis, YAxis, CartesianGrid, 
+  Tooltip, ResponsiveContainer } from 'recharts';
+import { SECONDARY } from '../../../../public/styles/colors';
 
 const VerticalChartComponent = ({data}) => (
   <div style={{ width: '100%', height: 1200 }}>
     <ResponsiveContainer>
-      <ComposedChart
+      <BarChart
         layout="vertical"
         data={data}
       >
@@ -12,9 +13,8 @@ const VerticalChartComponent = ({data}) => (
         <XAxis type="number" />
         <YAxis dataKey="name" type="category" />
         <Tooltip />
-        <Legend />
-        <Bar dataKey="value" barSize={20} fill="#413ea0" />
-      </ComposedChart>
+        <Bar dataKey="value" barSize={20} fill={SECONDARY} />
+      </BarChart>
     </ResponsiveContainer>
   </div>
 );
