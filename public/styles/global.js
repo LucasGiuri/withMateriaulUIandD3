@@ -5,6 +5,11 @@ export const Body = styled.body`
   width: 100%;
   margin: 0px;
   background: ${WHITE};
+
+  .recharts-wrapper {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+  }
 `;
 
 export const Section = styled.section`

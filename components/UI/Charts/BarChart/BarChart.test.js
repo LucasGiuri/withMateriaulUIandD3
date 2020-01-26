@@ -12,7 +12,7 @@ describe('BarChart', () => {
   ];
 
   it('BarChart basic render snapshoot', () => {
-    const component = renderer.create(<BarChart  data={data} />);
+    const component = renderer.create(<BarChart data={data} />);
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   })

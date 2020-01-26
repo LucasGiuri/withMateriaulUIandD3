@@ -13,7 +13,7 @@ describe('Tabs', () => {
     const setTab = jest.fn();
     const component = (<Tabs setTab={setTab} />);
     const tree = renderer.create(component);
-    const tab = tree.root.findByType(div);
+    const tab = tree.root.findByProps({id: 2})
     tab.props.onClick();
     expect(setTab).toHaveBeenCalledTimes(1);
   })

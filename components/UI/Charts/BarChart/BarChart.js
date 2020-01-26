@@ -19,38 +19,11 @@ const BarChartContainer = ({data}) => {
 }
 
 BarChartContainer.propTypes = {
-  data: PropTypes.shape({
-    avgPriceAmazon: PropTypes.number,
-    avgPriceNotino: PropTypes.number,
-    avgPriceCarethy: PropTypes.number,
-    avgPricePerfumesclub: PropTypes.number,
-    avgPriceNutritienda: PropTypes.number,
-    avgPriceSephora: PropTypes.number,
-    avgPriceElcorteingles: PropTypes.number,
-    avgPriceFundgruben: PropTypes.number,
-    avgPricePrimor: PropTypes.number,
-    avgPriceCarrefour: PropTypes.number,
-    avgPriceMaquillalia: PropTypes.number,
-    avgPriceUlabox: PropTypes.number,
-  })
+  data: PropTypes.array
 };
 
 BarChartContainer.defaultProps = {
-  data: {
-    count: 0,
-    avgPriceAmazon: 0,
-    avgPriceNotino: 0,
-    avgPriceCarethy: 0,
-    avgPricePerfumesclub: 0,
-    avgPriceNutritienda: 0,
-    avgPriceSephora: 0,
-    avgPriceElcorteingles: 0,
-    avgPriceFundgruben: 0,
-    avgPricePrimor: 0,
-    avgPriceCarrefour: 0,
-    avgPriceMaquillalia: 0,
-    avgPriceUlabox: 0,
-  }
+  data: []
 };
 
 export default BarChartContainer;

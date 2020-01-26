@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import { Fragment, useState } from 'react';
 import * as operations from '../../../store/operations';
-import PieChart from '../Charts/PieChart';
 import BarChart from '../Charts/BarChart';
 import VerticalChart from '../Charts/VerticalChart';
 import Title from '../../UI/Title/Title';
@@ -29,10 +28,7 @@ const Dashboard = ({isLoading, dashboardProducts}) => {
               )
             })}
           </Fragment> :
-            <Fragment>
-              <VerticalChart data={dashboardProducts} />
-              <PieChart data={dashboardProducts} />
-            </Fragment>
+          <VerticalChart data={dashboardProducts} />
           }
         </Fragment>
       }
