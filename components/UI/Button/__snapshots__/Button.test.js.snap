@@ -3,10 +3,10 @@
 exports[`Button Button basic render snapshoot 1`] = `
 .c0 {
   padding: 10px;
-  color: #FFFFFF;
+  color: #3f51b5;
   cursor: pointer;
-  border-color: #FFFFFF;
-  background-color: #000000;
+  border-color: #3f51b5;
+  background-color: #FFFFFF;
   font-size: 14px;
 }
 
@@ -35,9 +35,9 @@ exports[`Button Button isDisabled render snapshoot 1`] = `
 .c0 {
   padding: 10px;
   color: #999999;
-  cursor: default;
+  cursor: not-allowed;
   border-color: #999999;
-  background-color: #000000;
+  background-color: #FFFFFF;
   font-size: 14px;
 }
 

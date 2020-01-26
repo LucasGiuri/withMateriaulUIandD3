@@ -11,13 +11,13 @@ const List = ({list, sortByName, sortByPriceCarethy, sortByPriceAvgAmazon}) => {
   return (
     <Grid>
       <FiltersContainer>
-        <span onClick={sortByName}>{productName}</span>
+        <span id="sortByName" onClick={sortByName}>{productName}</span>
         <AvgFilter>
-          <span onClick={sortByPriceCarethy}>{priceCarethy}</span>
-          <span onClick={sortByPriceAvgAmazon}>{priceAVG}</span>
+          <span id="sortByAvgPriceCarethy" onClick={sortByPriceCarethy}>{priceCarethy}</span>
+          <span id="sortByAvgPriceAmazon" onClick={sortByPriceAvgAmazon}>{priceAVG}</span>
         </AvgFilter>
       </FiltersContainer>
-      {list ? 
+      {list && list.length > 0 ? 
         list.map((item, index) => {
           const { name, fetch_date, avg_price_amazon, avg_price_carethy } = item;
           return (
@@ -29,7 +29,7 @@ const List = ({list, sortByName, sortByPriceCarethy, sortByPriceAvgAmazon}) => {
             />
           )
         }) : 
-        <Title text={"No results Found :("} />
+        <Title text={"No results Found :("} centered={true} />
       }
     </Grid>
   )
