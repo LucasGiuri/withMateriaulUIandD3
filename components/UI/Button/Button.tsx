@@ -2,8 +2,8 @@
 
 interface ButtonProps {
   text: string;
-  isDisabled: boolean; 
-  onClick: () => void; 
+  isDisabled: boolean;
+  onClick: () => void;
 };
 
 function Button(props: ButtonProps) {
