@@ -1,5 +1,7 @@
 const withImages = require('next-images')
+const withTypescript = require('@zeit/next-typescript');
 
+module.exports = withTypescript();
 module.exports = withImages({
   webpack (config) {
     config.module.rules.push({
